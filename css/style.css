@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: #1B2029;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template: 100px 100px 100px / 100px 100px 100px;
+  grid-gap: 5px;
+}
+
+.peca {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.simbolo-o {
+  position: relative;
+}
+
+.simbolo-o:after {
+  position: absolute;
+  content: url("../images/o.png");
+  font-size: 50px;
+  line-height: 100px;
+  left: calc((100px - 64px) / 2);
+  bottom: calc(((100px - 64px) / 2) - 100px);
+}
+
+.simbolo-x {
+  position: relative;
+}
+
+.simbolo-x:after {
+  position: absolute;
+  content: url("../images/x.png");
+  font-size: 50px;
+  line-height: 100px;
+  left: calc((100px - 64px) / 2);
+  bottom: calc(((100px - 64px) / 2) - 100px);
+}
+
+.container-botao {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.botao {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #136ac7;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.botao:hover {
+  background-color: #0d76e6;
+}
